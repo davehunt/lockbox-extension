@@ -1,0 +1,124 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Lockbox's extension documentation!\n\n\n(INSERT PICTURE AND TOC HERE?)", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "Installing the Lockbox extension\n\n\nInstalling dependencies\n\n\nTo \ninstall the project dependencies\n, you can run:\n\n\nnpm install\n\n\n\n\nBuilding the source code\n\n\nTo \nbuild the project\n, you can run:\n\n\nnpm run-script build\n\n\n\n\nThis puts all the necessary files in the \ndist/\n directory, which you can then\ntemporarily load into Firefox (e.g. \nabout:debugging\n).\n\n\nBuilding the extension\n\n\nTo \nbuild an extension .xpi\n, you can run:\n\n\nnpm run-script package\n\n\n\n\n:warning: The resulting add-on is unsigned and likely won't work on release\nversions of Firefox. You can flip the \nxpinstall.signatures.required\n preference\non other channels accordingly.\n\n\n:warning: In preparation for Firefox 57, legacy extensions are also disabled. So\nyou'll need to flip the \nextensions.legacy.enabled\n preference, too.\n\n\nRunning the extension\n\n\nTo \nrun the extension in a Firefox Nightly\n browser, you can run:\n\n\nnpm run-script run -- -b nightly\n\n\n\n\nTo specify flags for \nrun\n to use regularly, use \nnpm config set jpm_runflags\n:\n\n\nnpm config set jpm_runflags=\n-b nightly\n\n\n\n\n\nThis way you can just run:\n\n\nnpm run run", 
+            "title": "Installing"
+        }, 
+        {
+            "location": "/install/#installing-the-lockbox-extension", 
+            "text": "", 
+            "title": "Installing the Lockbox extension"
+        }, 
+        {
+            "location": "/install/#installing-dependencies", 
+            "text": "To  install the project dependencies , you can run:  npm install", 
+            "title": "Installing dependencies"
+        }, 
+        {
+            "location": "/install/#building-the-source-code", 
+            "text": "To  build the project , you can run:  npm run-script build  This puts all the necessary files in the  dist/  directory, which you can then\ntemporarily load into Firefox (e.g.  about:debugging ).", 
+            "title": "Building the source code"
+        }, 
+        {
+            "location": "/install/#building-the-extension", 
+            "text": "To  build an extension .xpi , you can run:  npm run-script package  :warning: The resulting add-on is unsigned and likely won't work on release\nversions of Firefox. You can flip the  xpinstall.signatures.required  preference\non other channels accordingly.  :warning: In preparation for Firefox 57, legacy extensions are also disabled. So\nyou'll need to flip the  extensions.legacy.enabled  preference, too.", 
+            "title": "Building the extension"
+        }, 
+        {
+            "location": "/install/#running-the-extension", 
+            "text": "To  run the extension in a Firefox Nightly  browser, you can run:  npm run-script run -- -b nightly  To specify flags for  run  to use regularly, use  npm config set jpm_runflags :  npm config set jpm_runflags= -b nightly   This way you can just run:  npm run run", 
+            "title": "Running the extension"
+        }, 
+        {
+            "location": "/user-guide/", 
+            "text": "Lockbox User Guide\n\n\nFirst things first, \ninstall the extension\n.\n\n\nCommands\n\n\n\n\nCtrl-Shift-L\n: open Lockbox editor (item management)", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/user-guide/#lockbox-user-guide", 
+            "text": "First things first,  install the extension .", 
+            "title": "Lockbox User Guide"
+        }, 
+        {
+            "location": "/user-guide/#commands", 
+            "text": "Ctrl-Shift-L : open Lockbox editor (item management)", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/contributing/", 
+            "text": "Contributing\n\n\nThank you for considering and taking the time to contribute!\n\n\nThe following are guidelines for contributing to this project.\n\n\nCode of Conduct\n\n\nThis repository is governed by Mozilla's code of conduct and etiquette guidelines. For more details please see the \nMozilla Community Participation Guidelines\n and \nDeveloper Etiquette Guidelines\n.\n\n\nHow to Get Started\n\n\nPlease refer to installation and build instructions in the \ninstall documentation\n.\n\n\nHow to Report Bugs\n\n\nPlease open \na new issue in the GitHub repository\n with steps to reproduce the problem you're experiencing.\n\n\nBe sure to include as much information including screenshots, text output, and both your expected and actual results.\n\n\nHow to Request Enhancements\n\n\nFirst, please refer to the applicable \nGitHub project\n and search \nthe repository's GitHub issues\n to make sure your idea has not been (or is not still) considered.\n\n\nThen, please \ncreate a new issue in the GitHub repository\n describing your enhancement.\n\n\nBe sure to include as much detail as possible including step-by-step descriptions, specific examples, screenshots or mockups, and reasoning for why the enhancement might be worthwhile.\n\n\nPlease keep in mind, by opening an issue we provide no guarantee the enhancement will be implemented.", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/contributing/#contributing", 
+            "text": "Thank you for considering and taking the time to contribute!  The following are guidelines for contributing to this project.", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/contributing/#code-of-conduct", 
+            "text": "This repository is governed by Mozilla's code of conduct and etiquette guidelines. For more details please see the  Mozilla Community Participation Guidelines  and  Developer Etiquette Guidelines .", 
+            "title": "Code of Conduct"
+        }, 
+        {
+            "location": "/contributing/#how-to-get-started", 
+            "text": "Please refer to installation and build instructions in the  install documentation .", 
+            "title": "How to Get Started"
+        }, 
+        {
+            "location": "/contributing/#how-to-report-bugs", 
+            "text": "Please open  a new issue in the GitHub repository  with steps to reproduce the problem you're experiencing.  Be sure to include as much information including screenshots, text output, and both your expected and actual results.", 
+            "title": "How to Report Bugs"
+        }, 
+        {
+            "location": "/contributing/#how-to-request-enhancements", 
+            "text": "First, please refer to the applicable  GitHub project  and search  the repository's GitHub issues  to make sure your idea has not been (or is not still) considered.  Then, please  create a new issue in the GitHub repository  describing your enhancement.  Be sure to include as much detail as possible including step-by-step descriptions, specific examples, screenshots or mockups, and reasoning for why the enhancement might be worthwhile.  Please keep in mind, by opening an issue we provide no guarantee the enhancement will be implemented.", 
+            "title": "How to Request Enhancements"
+        }, 
+        {
+            "location": "/code_of_conduct/", 
+            "text": "Code of Conduct\n\n\nThis repository is governed by Mozilla's code of conduct and etiquette guidelines. For more details please see the \nMozilla Community Participation Guidelines\n and \nDeveloper Etiquette Guidelines\n.", 
+            "title": "Code of Conduct"
+        }, 
+        {
+            "location": "/code_of_conduct/#code-of-conduct", 
+            "text": "This repository is governed by Mozilla's code of conduct and etiquette guidelines. For more details please see the  Mozilla Community Participation Guidelines  and  Developer Etiquette Guidelines .", 
+            "title": "Code of Conduct"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "Table of Contents", 
+            "title": "API Guide"
+        }, 
+        {
+            "location": "/api/#table-of-contents", 
+            "text": "", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/releases/", 
+            "text": "Releases\n\n\nPreparation\n\n\nTo \nprepare the extension for a new version\n, you must:\n\n\n\n\nupdate and commit the version in \npackage.json\n\n\nupdate and commit the \nCHANGELOG.md\n\n\ntag, push, and merge to the \nmaster\n branch on GitHub\n\n\n\n\nPackaging\n\n\nTo \nbuild a signed extension .xpi\n, you must: commit and push to the\n\nproduction\n branch (ideally as a merge commit from \nmaster\n) on GitHub.\n\n\n\n\nLearn more about the deployment and hosting process here:\nhttps://github.com/mozilla/testpilot/blob/master/docs/development/hosting.md", 
+            "title": "Releases"
+        }, 
+        {
+            "location": "/releases/#releases", 
+            "text": "", 
+            "title": "Releases"
+        }, 
+        {
+            "location": "/releases/#preparation", 
+            "text": "To  prepare the extension for a new version , you must:   update and commit the version in  package.json  update and commit the  CHANGELOG.md  tag, push, and merge to the  master  branch on GitHub", 
+            "title": "Preparation"
+        }, 
+        {
+            "location": "/releases/#packaging", 
+            "text": "To  build a signed extension .xpi , you must: commit and push to the production  branch (ideally as a merge commit from  master ) on GitHub.", 
+            "title": "Packaging"
+        }
+    ]
+}
