@@ -1,8 +1,6 @@
 import os
-import time
 
 import pytest
-from selenium.webdriver.support.ui import WebDriverWait
 
 from pages.login import Login
 
@@ -14,26 +12,24 @@ def firefox_options(firefox_options):
     return firefox_options
 
 
-@pytest.fixture
-def selenium(pytestconfig, selenium):
+@pytest.fixture(scope='function')
+def hostname(pytestconfig, selenium):
     """Install Lockbox."""
     addon = os.path.join(pytestconfig.rootdir, 'addon.xpi')
-    selenium.install_addon(addon, temporary=True)
-    return selenium
+    _id = selenium.install_addon(addon, temporary=True)
+    with selenium.context(selenium.CONTEXT_CHROME):
+        hostname = selenium.execute_script("""
+var Cu = Components.utils;
+const {{WebExtensionPolicy}} = Cu.getGlobalForObject(Cu.import("resource://gre/modules/Extension.jsm", {{}}));
+return WebExtensionPolicy.getByID("{}").mozExtensionHostname;""".format(_id))
+    return hostname
 
 
 @pytest.fixture
-def login_page(selenium, base_url):
+def login_page(selenium, addon_hostname):
     """Launch Lockbox."""
-    window_handles = selenium.window_handles
-    time.sleep(1)  # FIXME: replace with a suitable wait
-    wait = WebDriverWait(selenium, timeout=10)
-    with selenium.context(selenium.CONTEXT_CHROME):
-        el = selenium.find_element_by_id('lockbox_mozilla_com-browser-action')
-        el.click()
-    wait.until(lambda s: len(s.window_handles) > len(window_handles))
-    selenium.switch_to.window(selenium.window_handles[-1])
-    return Login(selenium, base_url).wait_for_page_to_load()
+    selenium.get('moz-extension://{}/firstrun/index.html'.format(hostname))
+    return Login(selenium).wait_for_page_to_load()
 
 
 @pytest.fixture
